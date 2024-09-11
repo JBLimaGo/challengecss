@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CarDetails from "./components/CarDetails";
 
 function App() {
+  const cars = [
+    // Array de objeto
+    { id: 1, brand: "Honda", color: "Cinza", km: 10000, carNew: false },
+    { id: 2, brand: "Parati", color: "Prata", km: "250000", carNew: false },
+    { id: 3, brand: "Gol", color: "Preto", km: 0, carNew: true },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> Tarefa Seção 4 </h1>
+
+      <div className="car-container">
+        {cars.map((car) => (
+          <CarDetails
+            key={car.id}
+            brand={car.brand}
+            color={car.color}
+            km={car.km}
+            carNew={car.carNew}
+          />
+        ))}
+      </div>
     </div>
   );
 }

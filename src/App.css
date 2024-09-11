@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  color: black;
+  padding: 15px;
+}
+
+.car-container {
+  display: flex;
+  justify-content: center;
+}
+
+.car-container div {
+  margin-top: 50px;
+}
